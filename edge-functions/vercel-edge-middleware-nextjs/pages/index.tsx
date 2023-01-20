@@ -43,7 +43,7 @@ export default function Index() {
         </Button>
       </div>
       <div className="mt-4">
-        <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd-examples%2Fedge-functions%2Fvercel-edge-middleware-nextjs&env=EDGE_FLAGS_HOST,EDGE_FLAGS_APP&envDescription=URL%20to%20your%20self-hosted%20Flargd%20instance&envLink=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd">
+        <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd-examples%2Ftree%2Fmain%2Fedge-functions%2Fvercel-edge-middleware-nextjs&env=EDGE_FLAGS_HOST,EDGE_FLAGS_APP&envDescription=URL%20to%20your%20self-hosted%20Flargd%20instance&envLink=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd">
           <img src="https://vercel.com/button" alt="Deploy with Vercel" />
         </a>
       </div>
