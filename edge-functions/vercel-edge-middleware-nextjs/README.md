@@ -8,7 +8,7 @@ marketplace: false
 
 ## Demo
 
-https://edge-functions-feature-flag-posthog.vercel.sh
+https://flargd-edge-middleware-nextjs.vercel.app/
 
 ### One-Click Deploy
 
@@ -18,7 +18,21 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 
 ## Getting Started
 
-You'll need to have an instance of Flargd running. See the [hosting instructions](https://github.com/pmbanugo/flargd#hosting) to set one up, or use this public demo domain - `https://flargd.pmbanugo.workers.dev`.
+You'll need to have an instance of Flargd running either local or remote. See the [hosting instructions](https://github.com/pmbanugo/flargd#hosting) to set one up, or use this public demo domain - `https://flargd.pmbanugo.workers.dev`. You need to create the feature flags to be able to use them. There are three feature flags the application expect:
+
+- New_About_Page
+- New_Marketing_Page
+- New_Product_Page
+
+Run the following commands to create the flags. Feel free to change the `percentage` value as you please.
+
+```bash
+curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_About_Page", "percentage": "60" }' 'https://flargd.pmbanugo.workers.dev/apps/flargd-demo/flag'
+curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_Marketing_Page", "percentage": "50" }' 'https://flargd.pmbanugo.workers.dev/apps/flargd-demo/flag'
+curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_Product_Page", "percentage": "85" }' 'https://flargd.pmbanugo.workers.dev/apps/flargd-demo/flag'
+```
+
+> Replace `https://flargd.pmbanugo.workers.dev` with your hosted domain and `flargd-demo` with the name of your application
 
 Once that's done, copy the `.env.example` file in this directory to `.env.local` (which will be ignored by Git):
 
@@ -26,7 +40,7 @@ Once that's done, copy the `.env.example` file in this directory to `.env.local`
 cp .env.example .env.local
 ```
 
-Then open `.env.local` and update `EDGE_FLAGS_HOST` to match the host name for your _Flargd_ service. Fro example, if you're using the public demo domain, it'll be `https://flargd.pmbanugo.workers.dev`. You can optionally update the `EDGE_FLAGS_APP` variable. If you're usingthe public domain, I suggest you use a generic name for _EDGE_FLAGS_APP_ so that it doesn't conflict with other users.
+Then open `.env.local` and update `EDGE_FLAGS_HOST` to match the host name for your _Flargd_ service. For example, if you're using the public demo domain, it'll be `https://flargd.pmbanugo.workers.dev`. You can optionally update the `EDGE_FLAGS_APP` variable. If you're using the public domain, I suggest you use a generic name for _EDGE_FLAGS_APP_ so that it doesn't conflict with other users.
 
 Next, run Next.js in development mode:
 
@@ -40,4 +54,4 @@ yarn
 yarn dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=edge-middleware-eap) ([Documentation](https://nextjs.org/docs/deployment)).
+Deploy it to the cloud with [Vercel](#one-click-deploy).
