@@ -1,11 +1,9 @@
 import { type Flags, EDGE_FLAGS_HOST, EDGE_FLAGS_APP } from "./constants";
+import { createClient } from "@flargd/web";
 
 export type FlagValue = boolean | string | undefined;
 
-export type FlagResponse = {
-  identifier: number;
-  evaluation: { enable: boolean };
-};
+export type FlagResponse = { enable: boolean };
 
 export type FlagsMatcher = {
   [x: string]:
@@ -32,42 +30,27 @@ export async function getFeatureFlagVariant(
     throw new Error(`distinctUserId is required and it can't be empty`);
   }
 
-  const url = `${EDGE_FLAGS_HOST}/apps/${EDGE_FLAGS_APP}/flags/${featureName}/evaluation/${distinctUserId}`;
+  const client = createClient({
+    host: EDGE_FLAGS_HOST,
+    app: EDGE_FLAGS_APP,
+    distinctId: distinctUserId,
+  });
 
-  const res = await fetch(url);
+  const flag = await client.get(featureName);
 
-  if (!res.ok) {
-    throw new Error(
-      `Fetch request to retrieve the ${featureName} flag status failed with: (${res.status}) ${res.statusText}`
-    );
-  }
+  console.log("Your flag data:", JSON.stringify(flag, null, 2));
 
-  const data = (await res.json()) as {
-    identifier: number;
-    evaluation: { enable: boolean };
-  };
-
-  console.log("Your flag data:", JSON.stringify(data, null, 2));
-
-  return data.evaluation.enable;
+  return flag.enable;
 }
 
 export async function getFeatureFlag(
   featureName: Flags
 ): Promise<FlagResponse> {
-  const url = `${EDGE_FLAGS_HOST}/apps/${EDGE_FLAGS_APP}/flags/${featureName}/evaluation`;
+  const client = createClient({ host: EDGE_FLAGS_HOST });
 
-  const res = await fetch(url);
+  const flag = await client.get(featureName);
 
-  if (!res.ok) {
-    throw new Error(
-      `Fetch request to retrieve the ${featureName} flag status failed with: (${res.status}) ${res.statusText}`
-    );
-  }
+  console.log("Your flag data:", JSON.stringify(flag, null, 2));
 
-  const data = await res.json();
-
-  console.log("Your flag data:", JSON.stringify(data, null, 2));
-
-  return data;
+  return flag;
 }

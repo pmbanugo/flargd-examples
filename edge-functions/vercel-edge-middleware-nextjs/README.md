@@ -24,15 +24,17 @@ You'll need to have an instance of Flargd running either local or remote. See th
 - New_Marketing_Page
 - New_Product_Page
 
-Run the following commands to create the flags. Feel free to change the `percentage` value as you please.
+You can either create them from the Admin UI or use the API.
+
+Run the following commands to create the flags using the API. Feel free to change the `percentage` value as you please.
 
 ```bash
-curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_About_Page", "percentage": "60" }' 'https://flargd.pmbanugo.workers.dev/apps/flargd-demo/flag'
-curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_Marketing_Page", "percentage": "50" }' 'https://flargd.pmbanugo.workers.dev/apps/flargd-demo/flag'
-curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_Product_Page", "percentage": "85" }' 'https://flargd.pmbanugo.workers.dev/apps/flargd-demo/flag'
+curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_About_Page", "percentage": { "amount": "60" } }' 'https://flargd.pmbanugo.workers.dev/apps/default/flags'
+curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_Marketing_Page", "percentage": { "amount": "50" } }' 'https://flargd.pmbanugo.workers.dev/apps/default/flags'
+curl -XPOST -H "Content-type: application/json" -d '{ "flagName": "New_Product_Page", "percentage": { "amount": "85" } }' 'https://flargd.pmbanugo.workers.dev/apps/default/flags'
 ```
 
-> Replace `https://flargd.pmbanugo.workers.dev` with your hosted domain and `flargd-demo` with the name of your application
+> Replace `https://flargd.pmbanugo.workers.dev` with your hosted domain and `default` with the name of your application
 
 Once that's done, copy the `.env.example` file in this directory to `.env.local` (which will be ignored by Git):
 

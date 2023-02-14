@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@flargd/web": "latest",
     "@vercel/examples-ui": "^1.0.4",
     "js-cookie": "^3.0.1",
     "next": "canary",

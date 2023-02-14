@@ -1,0 +1,27 @@
+{
+  "name": "flargd-examples",
+  "private": true,
+  "description": "examples for Flargd",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmbanugo/flargd-examples.git"
+  },
+  "keywords": [
+    "flargd",
+    "feature flag",
+    "featurd flag management",
+    "edge flags"
+  ],
+  "author": "Peter Mbanugo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmbanugo/flargd-examples/issues"
+  },
+  "homepage": "https://github.com/pmbanugo/flargd-examples#readme",
+  "workspaces": [
+    "edge-functions/*"
+  ]
+}
