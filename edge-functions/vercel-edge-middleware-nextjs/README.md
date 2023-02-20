@@ -42,7 +42,7 @@ Once that's done, copy the `.env.example` file in this directory to `.env.local`
 cp .env.example .env.local
 ```
 
-Then open `.env.local` and update `EDGE_FLAGS_HOST` to match the host name for your _Flargd_ service. For example, if you're using the public demo domain, it'll be `https://flargd.pmbanugo.workers.dev`. You can optionally update the `EDGE_FLAGS_APP` variable. If you're using the public domain, I suggest you use a generic name for _EDGE_FLAGS_APP_ so that it doesn't conflict with other users.
+Then open `.env.local` and update `EDGE_FLAGS_HOST` to match the host name for your _Flargd_ service. For example, if you're using the public demo domain, it'll be `https://flargd.pmbanugo.workers.dev`. You can optionally update the `EDGE_FLAGS_APP` variable. If you're using the public domain, I suggest you use a generic name for `EDGE_FLAGS_APP` so that it doesn't conflict with other users.
 
 Next, run Next.js in development mode:
 
