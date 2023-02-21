@@ -30,8 +30,6 @@ export async function getFeatureFlagVariant(
     throw new Error(`distinctUserId is required and it can't be empty`);
   }
 
-  console.log({ EDGE_FLAGS_HOST, EDGE_FLAGS_APP });
-
   const client = createClient({
     host: EDGE_FLAGS_HOST,
     app: EDGE_FLAGS_APP,
