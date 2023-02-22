@@ -8,7 +8,7 @@ marketplace: false
 
 ## Demo
 
-https://flargd-edge-middleware-nextjs.vercel.app/
+https://flargd-basic-ab-test-nextjs.vercel.app/
 
 ### One-Click Deploy
 
