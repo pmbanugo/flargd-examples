@@ -14,7 +14,7 @@ You can choose from one of the following two methods to use this repository:
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=flargd-examples):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fedge-middleware%2Ffeature-flag-apple-store&project-name=feature-flag-apple-store&repo-name=feature-flag-apple-store&env=EDGE_CONFIG&edge-config-stores=%7B%22EDGE_CONFIG%22%3A%7B%22featureFlagsAppleStore_storeClosed%22%3Atrue%7D%7D)
+[![Deploy with Vercel](https://vercel.com/button)]([![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd-examples%2Ftree%2Fmain%2Fedge-middleware%2Fvercel-feature-flag-apple-store-nextjs&env=EDGE_FLAGS_HOST,EDGE_FLAGS_APP&envDescription=The%20URL%20to%20Flargd%20server&redirect-url=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd))
 
 ### Clone and Deploy
 

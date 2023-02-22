@@ -14,7 +14,7 @@ https://flargd-edge-middleware-nextjs.vercel.app/
 
 Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd-examples%2Ftree%2Fmain%2Fedge-functions%2Fvercel-edge-middleware-nextjs&env=EDGE_FLAGS_HOST,EDGE_FLAGS_APP&envDescription=URL%20to%20your%20self-hosted%20Flargd%20instance&envLink=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd-examples%2Ftree%2Fmain%2Fedge-middleware%2Fvercel-basic-ab-test-nextjs&env=EDGE_FLAGS_HOST,EDGE_FLAGS_APP&envDescription=URL%20to%20your%20self-hosted%20Flargd%20instance&envLink=https%3A%2F%2Fgithub.com%2Fpmbanugo%2Fflargd)
 
 ## Getting Started
 
