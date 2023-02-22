@@ -40,11 +40,7 @@ export default function Index() {
         session.
       </Text>
       <div>
-        <Button
-          variant="secondary"
-          className="mr-2.5 bg-red-500"
-          onClick={() => resetVariant()}
-        >
+        <Button className="mr-2.5 bg-red-500" onClick={() => resetVariant()}>
           Reset feature flags
         </Button>
       </div>
