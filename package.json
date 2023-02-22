@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/pmbanugo/flargd-examples#readme",
   "workspaces": [
-    "edge-functions/*"
+    "edge-middleware/*"
   ]
 }
