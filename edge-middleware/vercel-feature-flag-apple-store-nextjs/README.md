@@ -4,7 +4,7 @@ This template uses [Flargd's](https://github.com/pmbanugo/flargd) edge feature f
 
 ## Demo
 
-[Add URL](#)
+https://flargd-apple-store-nextjs.vercel.app/
 
 ## How to Use
 

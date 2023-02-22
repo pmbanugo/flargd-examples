@@ -4,7 +4,7 @@ This example shows how to implement a maintenance page on the edge
 
 ## Demo
 
-https://edge-maintenance-page.vercel.appppp
+https://flargd-maintenance-page-nextjs.vercel.app/
 
 ## How to Use
 
